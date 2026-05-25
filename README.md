@@ -315,5 +315,3 @@ Planned enhancements:
 ## Author
 
 **Divyansh Rawat**
-
-AI / ML • Deep Learning • Multimodal Systems • Cyber Security
