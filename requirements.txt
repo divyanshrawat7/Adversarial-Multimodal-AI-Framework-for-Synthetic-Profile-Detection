@@ -6,4 +6,4 @@ streamlit
 pillow
 accelerate
 sentencepiece
-gdown
+gdown>=5.1.0
