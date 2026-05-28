@@ -142,7 +142,7 @@ components.html(
 
     height=260
 )
-MODEL_DIR = "../models"
+MODEL_DIR = "models"
 
 IMAGE_MODEL_PATH = \
     f"{MODEL_DIR}/fake_profile_detector.pth"
