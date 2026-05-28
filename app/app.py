@@ -168,9 +168,10 @@ if not os.path.exists(
     ):
 
         gdown.download(
-            f"https://drive.google.com/uc?id={DISTILBERT_DRIVE_ID}",
-            TEXT_MODEL_PATH,
-            quiet=False
+            id=DISTILBERT_DRIVE_ID,
+            output=TEXT_MODEL_PATH,
+            quiet=False,
+            fuzzy=True
         )
 
 
