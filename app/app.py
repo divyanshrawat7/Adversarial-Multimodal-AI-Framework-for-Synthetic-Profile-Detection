@@ -15,7 +15,7 @@ st.set_page_config(
 )
 
 with open(
-    "styles.css"
+    "app/styles.css"
 ) as css:
 
     st.markdown(
