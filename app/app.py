@@ -1,3 +1,6 @@
+import os
+import gdown
+
 import streamlit as st
 import streamlit.components.v1 as components
 
@@ -139,12 +142,44 @@ components.html(
 
     height=260
 )
+MODEL_DIR = "../models"
+
+IMAGE_MODEL_PATH = \
+    f"{MODEL_DIR}/fake_profile_detector.pth"
+
+TEXT_MODEL_PATH = \
+    f"{MODEL_DIR}/distilbert_text_model.pth"
+
+DISTILBERT_DRIVE_ID = \
+    "19heEQmrr6GkHowHsAbn-jFuVNUZBCoTR"
+
+
+os.makedirs(
+    MODEL_DIR,
+    exist_ok=True
+)
+
+if not os.path.exists(
+    TEXT_MODEL_PATH
+):
+
+    with st.spinner(
+        "Downloading NLP model..."
+    ):
+
+        gdown.download(
+            f"https://drive.google.com/uc?id={DISTILBERT_DRIVE_ID}",
+            TEXT_MODEL_PATH,
+            quiet=False
+        )
+
+
 image_model = ImageDetector(
-    "../models/fake_profile_detector.pth"
+    IMAGE_MODEL_PATH
 )
 
 text_model = TextDetector(
-    "../models/distilbert_text_model.pth"
+    TEXT_MODEL_PATH
 )
 
 left_col,right_col = st.columns(
