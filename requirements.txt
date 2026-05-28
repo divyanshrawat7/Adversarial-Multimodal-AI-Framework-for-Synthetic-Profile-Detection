@@ -6,3 +6,4 @@ streamlit
 pillow
 accelerate
 sentencepiece
+gdown
