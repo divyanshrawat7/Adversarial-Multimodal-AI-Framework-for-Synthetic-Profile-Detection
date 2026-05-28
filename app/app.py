@@ -167,11 +167,13 @@ if not os.path.exists(
         "Downloading NLP model..."
     ):
 
+        url = \
+            f"https://drive.google.com/uc?id={DISTILBERT_DRIVE_ID}"
+
         gdown.download(
-            id=DISTILBERT_DRIVE_ID,
-            output=TEXT_MODEL_PATH,
-            quiet=False,
-            fuzzy=True
+            url,
+            TEXT_MODEL_PATH,
+            quiet=False
         )
 
 
