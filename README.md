@@ -353,6 +353,50 @@ Open it in your browser.
 
 ---
 
+## Optional: Reproducing Training Pipeline
+
+If you would like to retrain the models from scratch instead of using the deployed application or pretrained inference pipeline, dataset setup is required.
+
+### Kaggle API Setup (if using Kaggle datasets)
+
+1. Create a Kaggle account.
+
+2. Go to:
+
+```text
+Kaggle → Account → API → Create New API Token
+```
+
+3. Download:
+
+```text
+kaggle.json
+```
+
+4. Place the file inside:
+
+```text
+~/.kaggle/
+```
+
+or configure it inside **Google Colab**.
+
+5. Download the required datasets.
+
+Dataset used in this project:
+
+**Real vs AI Face Dataset**
+
+Dataset Access:
+
+https://drive.google.com/file/d/1lLf4KHG8UbQGaCQJrQklathL3hZBgJa6/view?usp=sharing
+
+Additional robustness experiment:
+
+- 30 photorealistic AI-generated portrait samples were added for targeted robustness fine-tuning.
+
+---
+
 ## Model Handling
 
 To keep the repository lightweight and deployment-friendly:
