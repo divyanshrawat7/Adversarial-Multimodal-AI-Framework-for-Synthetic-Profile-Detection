@@ -383,13 +383,11 @@ or configure it inside **Google Colab**.
 
 5. Download the required datasets.
 
-Dataset used in this project:
+Dataset used:
 
 **Real vs AI Face Dataset**
 
-Dataset Access:
-
-https://drive.google.com/file/d/1lLf4KHG8UbQGaCQJrQklathL3hZBgJa6/view?usp=sharing
+(See Dataset section above for dataset access details.)
 
 Additional robustness experiment:
 
@@ -401,10 +399,26 @@ Additional robustness experiment:
 
 To keep the repository lightweight and deployment-friendly:
 
-* Smaller model weights are included within the repository.
+* `fake_profile_detector.pth` is included within the repository.
 * Large DistilBERT model weights are hosted externally and downloaded automatically during runtime.
 
-No manual model download is required for normal usage.
+Normal usage does **not require manual model download**.
+
+However, if automatic download fails or you would like to run the project manually, you can download the Transformer model directly.
+
+### DistilBERT Model Download
+
+`distilbert_text_model.pth`
+
+Google Drive Link:
+
+https://drive.google.com/file/d/19heEQmrr6GkHowHsAbn-jFuVNUZBCoTR/view?usp=sharing
+
+After downloading, place the file inside:
+
+```text
+models/
+```
 
 ---
 
@@ -444,9 +458,3 @@ GitHub:
 https://github.com/divyanshrawat7
 
 ---
-
-# Repository
-
-GitHub Project:
-
-https://github.com/divyanshrawat7/Adversarial-Multimodal-AI-Framework-for-Synthetic-Profile-Detection
